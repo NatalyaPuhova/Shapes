@@ -41,15 +41,15 @@ public class Main {
         System.out.println("p4.getX()="+p4.getX());
 
 
-        Rectangle rectangle=new Rectangle(p4,10,5,"желтый");
-        rectangle.draw();
-        System.out.println(rectangle.toString());
+        Rectangle rectangle1=new Rectangle(p4,10,5,"желтый");
+        rectangle1.draw();
+        System.out.println(rectangle1.toString());
 
         System.out.println(triangle.toString());
         System.out.println(circle.toString());
 
         ShapeStorage storage=new ShapeStorage();
-        storage.add(rectangle);
+        storage.add(rectangle1);
         storage.add(triangle);
 
         System.out.println("\nstoragE^");
@@ -87,10 +87,28 @@ public class Main {
         Triangle triangle1=new Triangle(p1,p2,p3,"green");
         Triangle triangle2=new Triangle(p7,p8,p9,"green");
 
-        b=triangle1.equals(triangle2);///////////////
+        b=triangle1.equals(triangle2);
         System.out.println("triangle совпадают "+b);
 
 
+
+        System.out.println(rectangle1.calculateSquare());
+
+        p4=new Point(1,2);
+        Rectangle rectangle2=new Rectangle(p4,4,5,"желтый");
+
+        System.out.println(rectangle1.calculateSquare());
+        for (Point p:rectangle2.returnRectanglePoints()){
+            System.out.println(p);
+        }
+        System.out.println("rectangle2.calculateSquare()="+rectangle2.calculateSquare());
+
+        p5=new Point(2,3);
+        Rectangle rectangle3=new Rectangle(p5,4,5,"желтый");
+        System.out.println("rectangle3.calculateSquare()="+rectangle3.calculateSquare());
+
+        b=rectangle2.equals(rectangle3);
+        System.out.println("rectangle совпадают "+b);
 
 
 
