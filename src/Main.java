@@ -109,6 +109,11 @@ public class Main {
 
         b=rectangle2.equals(rectangle3);
         System.out.println("rectangle совпадают "+b);
+        p4=new Point(5,6);
+        p5=new Point(6,9);
+        Circle circle3=new Circle(point4,2,"green");
+        Circle circle4=new Circle(point5,2,"green");
+        System.out.println("circle3.equals(circle4)="+circle3.equals(circle4));
 
 
 
